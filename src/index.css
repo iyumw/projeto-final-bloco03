@@ -11,10 +11,16 @@
     /* Tons de Verde */
     --color-green-medium: #10B981;
     --color-green-light: #6EE7B7;
+    --color-green-lighter: #5AD19D;
 
     /* Tons de Cinza */
     --color-gray-neutral: #6B7280;
     --color-white: #FFFFFF;
+
+    /* Tons de Vermelho */
+
+    --color-danger: #EF4444;
+    --color-danger-light: #F87171;
 
     /* Fontes */
     --font-heading: 'Montserrat', sans-serif;
@@ -23,5 +29,5 @@
 
 body, html {
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
   }

@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg-purple-dark p-4 px-8 shadow-lg text-white">
+    <nav className="bg-[var(--color-purple-dark)] p-4 px-8 shadow-lg text-white">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         {/* Logo */}
         <Link
           to="/home"
-          className="text-3xl font-bold transition duration-300 ease-in-out hover:text-pink-50 hover:scale-105"
+          className="text-3xl font-bold transition duration-300 ease-in-out hover:text-[var(--color-purple-light)] hover:scale-105"
         >
           <img
-            className="w-32" // Reduzi o tamanho da logo para evitar sobrecarregar o layout
+            className="w-32"
             src="https://ik.imagekit.io/iyume/produtos_farmacia/assets/logo.png"
             alt="Logo da Farmácia"
           />
@@ -22,9 +22,9 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Pesquisar..."
-            className="w-full px-4 py-2 rounded-l-lg bg-purple-medium text-white focus:outline-none focus:ring-2 focus:ring-purple-light"
+            className="w-full px-4 py-2 rounded-l-lg bg-[var(--color-purple-medium)] text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-purple-light)]"
           />
-          <button className="px-4 py-2 bg-green-medium hover:bg-green-light text-white rounded-r-lg transition duration-300 ease-in-out">
+          <button className="px-4 py-2 bg-[var(--color-green-medium)] hover:bg-[var(--color-green-light)] text-white rounded-r-lg transition duration-300 ease-in-out">
             <MagnifyingGlass size={24} />
           </button>
         </div>
@@ -34,25 +34,25 @@ const Navbar = () => {
           <div className="flex space-x-6 font-heading">
             <Link
               to="/categorias"
-              className="hover:text-purple-light transition duration-300 ease-in-out hover:-translate-y-1"
+              className="hover:text-[var(--color-purple-light)] transition duration-300 ease-in-out hover:-translate-y-1"
             >
               Categorias
             </Link>
             <Link
               to="/cadastrarcategoria"
-              className="hover:text-purple-light transition duration-300 ease-in-out hover:-translate-y-1"
+              className="hover:text-[var(--color-purple-light)] transition duration-300 ease-in-out hover:-translate-y-1"
             >
               Cadastrar Categorias
             </Link>
             <Link
               to="/perfil"
-              className="hover:text-purple-light transition duration-300 ease-in-out hover:-translate-y-1"
+              className="hover:text-[var(--color-purple-light)] transition duration-300 ease-in-out hover:-translate-y-1"
             >
               <User size={29} />
             </Link>
             <Link
               to="/carrinho"
-              className="hover:text-purple-light transition duration-300 ease-in-out hover:-translate-y-1"
+              className="hover:text-[var(--color-purple-light)] transition duration-300 ease-in-out hover:-translate-y-1"
             >
               <ShoppingCart size={29} />
             </Link>
