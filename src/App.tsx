@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Footer from "./components/footer/Footer";
+import Home from "./pages/home/Home";
+import Navbar from "./components/navbar/Navbar";
+import ListaCategorias from "./components/categorias/listacategorias/ListaCategorias";
+import DeletarCategoria from "./components/categorias/deletecategoria/DeletarCategoria";
+import FormCategoria from "./components/categorias/formcategoria/FormCategoria";
+import ListaProdutos from "./components/produtos/listaprodutos/ListaProdutos";
+import FormProduto from "./components/produtos/formproduto/FormProduto";
+import DeletarProduto from "./components/produtos/deletarproduto/DeletarProduto";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Navbar />
+        <div className="scroll-smooth antialiased flex flex-col">
+          <div className="">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+
+              <Route path="/cadastrarcategoria" element={<FormCategoria />} />
+              <Route path="/editarcategoria/:id" element={<FormCategoria />} />
+              <Route
+                path="/deletarcategoria/:id"
+                element={<DeletarCategoria />}
+              />
+              <Route path="/categorias" element={<ListaCategorias />} />
+
+              <Route path="/produtos" element={<ListaProdutos />} />
+              <Route path="/editarproduto/:id" element={<FormProduto />} />
+              <Route path="/cadastrarproduto" element={<FormProduto />} />
+              <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
+            </Routes>
+          </div>
+
+          <Footer />
+        </div>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
