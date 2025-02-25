@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: "#", // Link da API do Back-end
+    baseURL: "https://farmacia-nest-t0o5.onrender.com/", // Link da API do Back-end
 });
 
 export const cadastrarUsuario = async (url: string, dados: Object, setDados: Function) => {

@@ -20,3 +20,8 @@
     --font-heading: 'Montserrat', sans-serif;
     --font-sans: 'Lato', sans-serif;
 }
+
+body, html {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
