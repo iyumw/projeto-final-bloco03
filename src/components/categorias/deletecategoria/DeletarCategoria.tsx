@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
 import { listar, deletar } from "../../../services/Service";
 import { RotatingLines } from "react-loader-spinner";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function DeletarCategoria() {
   const navigate = useNavigate();
@@ -17,10 +18,10 @@ function DeletarCategoria() {
     } catch (error: any) {
       console.error("Erro ao buscar categoria:", error);
       if (error.toString().includes("403")) {
-        alert("Sua sessão expirou. Faça login novamente.");
+        ToastAlerta("Sua sessão expirou. Faça login novamente.", "info");
         navigate("/");
       } else {
-        alert("Erro ao carregar a categoria.");
+        ToastAlerta("Erro ao carregar a categoria.", "erro");
       }
     }
   }
@@ -36,15 +37,15 @@ function DeletarCategoria() {
 
     try {
       await deletar(`/categorias/${id}`);
-      alert("Categoria deletada com sucesso!");
+      ToastAlerta("Categoria deletada com sucesso!", "sucesso");
       navigate("/categorias");
     } catch (error: any) {
       console.error("Erro ao deletar categoria:", error);
       if (error.toString().includes("403")) {
-        alert("Sua sessão expirou. Faça login novamente.");
+        ToastAlerta("Sua sessão expirou. Faça login novamente.", "info");
         navigate("/");
       } else {
-        alert("Erro ao deletar a categoria.");
+        ToastAlerta("Erro ao deletar a categoria.", "erro");
       }
     }
 
@@ -71,7 +72,7 @@ function DeletarCategoria() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[var(--color-purple-light)] p-4">
-      <div className="container w-full max-w-2xl mx-auto p-6 bg-[var(--color-white)] rounded-lg shadow-lg flex flex-col items-center">
+      <div className="container w-full max-w-2xl mx-auto p-6 bg-[var(--color-white)] rounded-lg shadow-lg flex flex-col items-center font-heading">
         <h1 className="text-4xl text-center my-6 text-[var(--color-purple-dark)] font-bold">
           Deletar Categoria
         </h1>
@@ -100,7 +101,7 @@ function DeletarCategoria() {
               Não, voltar
             </button>
             <button
-              className="flex-1 bg-[var(--color-green-medium)] hover:bg-[var(--color-green-light)] text-[var(--color-white)] font-bold py-3 flex items-center justify-center transition-colors"
+              className="flex-1 bg-danger hover:bg-danger-light text-[var(--color-white)] font-bold py-3 flex items-center justify-center transition-colors"
               onClick={deletarCategoria}
             >
               {isLoading ? (

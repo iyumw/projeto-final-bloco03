@@ -6,6 +6,9 @@ import Navbar from "./components/navbar/Navbar";
 import ListaCategorias from "./components/categorias/listacategorias/ListaCategorias";
 import DeletarCategoria from "./components/categorias/deletecategoria/DeletarCategoria";
 import FormCategoria from "./components/categorias/formcategoria/FormCategoria";
+import ListaProdutos from "./components/produtos/listaprodutos/ListaProdutos";
+import FormProduto from "./components/produtos/formproduto/FormProduto";
+import DeletarProduto from "./components/produtos/deletarproduto/DeletarProduto";
 
 function App() {
   return (
@@ -25,6 +28,11 @@ function App() {
                 element={<DeletarCategoria />}
               />
               <Route path="/categorias" element={<ListaCategorias />} />
+
+              <Route path="/produtos" element={<ListaProdutos />} />
+              <Route path="/editarproduto/:id" element={<FormProduto />} />
+              <Route path="/cadastrarproduto" element={<FormProduto />} />
+              <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
             </Routes>
           </div>
 

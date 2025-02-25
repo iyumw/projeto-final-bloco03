@@ -63,7 +63,7 @@ function FormCategoria() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-[var(--color-purple-light)] p-4">
       <div className="container flex flex-col mx-auto items-center bg-[var(--color-white)] p-8 rounded-lg shadow-lg max-w-2xl w-full">
-        <h1 className="text-4xl text-center my-8 text-[var(--color-purple-dark)] font-bold">
+        <h1 className="text-4xl text-center my-8 text-[var(--color-purple-dark)] font-bold font-heading">
           {id ? "Editar Categoria" : "Cadastrar Categoria"}
         </h1>
 

@@ -1,3 +1,5 @@
+import ModalProduto from "../../components/produtos/modalproduto/ModalProduto";
+
 function Home() {
   return (
     <div className="flex-1 flex justify-center bg-purple-light">
@@ -11,10 +13,8 @@ function Home() {
             Aqui você encontra Medicamentos e Cosméticos!
           </p>
           <div className="flex justify-around gap-4">
-            <button className="px-6 py-2 bg-green-medium text-white rounded-md hover:bg-green-light hover:text-purple-dark duration-300 transition-colors ease-in-out cursor-pointer font-sans">
-              Cadastrar Categoria
-            </button>
-            {/* <ModalCategoria /> */}
+            
+            <ModalProduto />
           </div>
         </div>
 

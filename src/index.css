@@ -1,33 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
-
 @theme {
-    /* Tons de Roxo */
-    --color-purple-dark: #5B21B6;
-    --color-purple-medium: #7C3AED;
-    --color-purple-light: #C4B5FD;
+  /* Tons de Roxo */
+  --color-purple-dark: #5b21b6;
+  --color-purple-medium: #7c3aed;
+  --color-purple-light: #c4b5fd;
 
-    /* Tons de Verde */
-    --color-green-medium: #10B981;
-    --color-green-light: #6EE7B7;
-    --color-green-lighter: #5AD19D;
+  /* Tons de Verde */
+  --color-green-medium: #10b981;
+  --color-green-light: #6ee7b7;
+  --color-green-lighter: #5ad19d;
 
-    /* Tons de Cinza */
-    --color-gray-neutral: #6B7280;
-    --color-white: #FFFFFF;
+  /* Tons de Cinza */
+  --color-gray-neutral: #6b7280;
+  --color-white: #ffffff;
 
-    /* Tons de Vermelho */
+  /* Tons de Vermelho */
 
-    --color-danger: #EF4444;
-    --color-danger-light: #F87171;
+  --color-danger: #ef4444;
+  --color-danger-light: #f87171;
 
-    /* Fontes */
-    --font-heading: 'Montserrat', sans-serif;
-    --font-sans: 'Lato', sans-serif;
+  /* Fontes */
+  --font-heading: "Montserrat", sans-serif;
+  --font-sans: "Lato", sans-serif;
 }
 
-body, html {
-    overflow-x: auto;
-    overflow-y: auto;
+body,
+html {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
