@@ -4,7 +4,7 @@ function Footer() {
   let data = new Date().getFullYear();
 
   return (
-    <div className="justify-center grid grid-rows-2 bg-gray-neutral p-4 text-sm w-full text-white">
+    <div className="bottom-0 justify-center grid grid-rows-2 bg-gray-neutral p-4 text-sm w-full text-white">
       <p>© {data} Isis Okamoto. Todos os direitos reservados.</p>
 
       <ul className="flex justify-center gap-3">

@@ -26,7 +26,7 @@ function ListaCategorias() {
               <BeatLoader color="var(--color-green-medium)" />
             </div>
         )}
-        <div className="flex justify-center w-full my-4 pb-8">
+        <div className="flex justify-center w-full my-4 px-5 pb-8">
           <div className="container flex flex-col">
             <h1 className="text-4xl font-medium text-center my-8 text-purple-dark">
               Lista de Categorias
