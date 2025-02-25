@@ -1,1 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+
+@theme {
+    /* Tons de Roxo */
+    --color-purple-dark: #5B21B6;
+    --color-purple-medium: #7C3AED;
+    --color-purple-light: #C4B5FD;
+
+    /* Tons de Verde */
+    --color-green-medium: #10B981;
+    --color-green-light: #6EE7B7;
+
+    /* Tons de Cinza */
+    --color-gray-neutral: #6B7280;
+    --color-white: #FFFFFF;
+
+    /* Fontes */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-sans: 'Lato', sans-serif;
+}
